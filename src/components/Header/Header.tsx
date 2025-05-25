@@ -71,6 +71,20 @@ const NavLink = styled(Link)`
   }
 `;
 
+const LoginButton = styled(Link)`
+  background-color: #0070f3;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #0051a8;
+  }
+`;
+
 const Header: FC<HeaderProps> = ({ title = "Clone MY ROUTINE" }) => {
   return (
     <StyledHeader>
@@ -80,6 +94,7 @@ const Header: FC<HeaderProps> = ({ title = "Clone MY ROUTINE" }) => {
           <NavLink href="/dashboard">Dashboard</NavLink>
           <NavLink href="/routines">Routines</NavLink>
           <NavLink href="/profile">Profile</NavLink>
+          <LoginButton href="/login">Sign in</LoginButton>
         </Nav>
       </Container>
     </StyledHeader>

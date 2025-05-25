@@ -71,7 +71,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-const Header: FC<HeaderProps> = ({ title = "My Routine" }) => {
+const Header: FC<HeaderProps> = ({ title = "Clone MY ROUTINE" }) => {
   return (
     <StyledHeader>
       <Container>

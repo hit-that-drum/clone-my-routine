@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Routine",
-  description: "Build better habits and achieve your goals",
+  title: "Clone MY ROUTINE",
+  description: "Clone MY ROUTINE",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

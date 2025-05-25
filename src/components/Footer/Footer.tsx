@@ -87,7 +87,7 @@ const Copyright = styled.p`
   margin: 0;
 `;
 
-const Footer: FC<FooterProps> = ({ companyName = "My Routine" }) => {
+const Footer: FC<FooterProps> = ({ companyName = "Clone MY ROUTINE" }) => {
   const currentYear = new Date().getFullYear();
 
   return (

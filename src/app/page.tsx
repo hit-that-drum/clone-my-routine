@@ -1,8 +1,13 @@
-export default function Home() {
+import Home from "./home";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+
+export default function HomePage() {
   return (
-    <div>
-      YAP
-      <div>yeah</div>
-    </div>
+    <>
+      <Header title="Clone MY ROUTINE" />
+      <Home />
+      <Footer companyName="Clone MY ROUTINE" />
+    </>
   );
 }

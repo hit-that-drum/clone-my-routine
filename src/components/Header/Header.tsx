@@ -1,8 +1,9 @@
 "use client";
 
 import { FC } from "react";
-import Link from "next/link";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 interface HeaderProps {
   title?: string;
@@ -23,65 +24,55 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
 
-const Logo = styled(Link)`
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-  &:hover {
-    color: #0070f3;
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    border: 1px solid rgb(71, 91, 74);
+  }
+
+  .profile-name {
+    margin-left: 3px;
+    line-height: 22px;
+    text-align: left;
+    font-size: 16px;
+    color: rgb(71, 91, 74);
+  }
+
+  .profile-icon {
+    display: flex;
+    margin: 0px 4px;
+    border-radius: 12px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 4px 6px;
+    background: rgb(255, 255, 255);
   }
 `;
 
-const Nav = styled.nav`
+const LogoImage = styled.img`
+  width: 110px;
+`;
+
+const IconContainer = styled.div`
   display: flex;
-  gap: 2rem;
-  align-items: center;
-`;
-
-const NavLink = styled(Link)`
-  color: #666;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  padding: 0.5rem 0;
-  position: relative;
-
+  gap: 20px;
+  padding: 20px;
   &:hover {
-    color: #0070f3;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #0070f3;
-    transition: width 0.2s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-`;
-
-const LoginButton = styled(Link)`
-  background-color: #0070f3;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #0051a8;
+    cursor: pointer;
   }
 `;
 
@@ -89,13 +80,20 @@ const Header: FC<HeaderProps> = ({ title = "Clone MY ROUTINE" }) => {
   return (
     <StyledHeader>
       <Container>
-        <Logo href="/">{title}</Logo>
-        <Nav>
-          <NavLink href="/dashboard">Dashboard</NavLink>
-          <NavLink href="/routines">Routines</NavLink>
-          <NavLink href="/profile">Profile</NavLink>
-          <LoginButton href="/login">Sign in</LoginButton>
-        </Nav>
+        <LogoImage src="/myroutine_header_icon.png" alt="My Routine" />
+        <div className="profile-container">
+          <div className="profile-info">
+            <img
+              src="https://hips.hearstapps.com/hmg-prod/images/types-of-cherries-morello-1615572999.jpg?crop=0.437xw:1.00xh;0.0680xw,0&resize=980:*"
+              className="profile-image"
+            />
+            <div className="profile-name">밍밍</div>
+            <div className="profile-icon">🍒 🌼 🧶</div>
+          </div>
+          <IconContainer>
+            <FontAwesomeIcon icon={faBars} size="1x" color="rgb(71, 91, 74)" />
+          </IconContainer>
+        </div>
       </Container>
     </StyledHeader>
   );

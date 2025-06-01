@@ -28,7 +28,7 @@ const Home: React.FC<HomeProps> = ({ title = "Welcome" }) => {
 
   return (
     <div className="home-container">
-      <h1>{title}</h1>
+      <h1 style={{ height: "100vh" }}>{title}</h1>
     </div>
   );
 };

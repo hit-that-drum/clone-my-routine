@@ -19,6 +19,7 @@ export const ColorTheme = {
   text: {
     primary: "#475B4A",
     secondary: "#CCCCCC",
+    light: "#919C92",
   },
 
   // Border colors
@@ -30,6 +31,7 @@ export const ColorTheme = {
   // Shadow colors
   shadow: {
     default: "#1A1A1A",
+    light: "#f5f5f5",
   },
 } as const;
 

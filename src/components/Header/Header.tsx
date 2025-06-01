@@ -1,18 +1,13 @@
 "use client";
 
-import { FC } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ColorTheme } from "@/app/style/ColorTheme";
 
-interface HeaderProps {
-  title?: string;
-}
-
 const StyledHeader = styled.header`
   background-color: ${ColorTheme.background.default};
-  box-shadow: 0 2px 4px ${ColorTheme.shadow.default};
+  box-shadow: 0 2px 4px ${ColorTheme.shadow.light};
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -77,7 +72,7 @@ const IconContainer = styled.div`
   }
 `;
 
-const Header: FC<HeaderProps> = ({ title = "Clone MY ROUTINE" }) => {
+const Header = () => {
   return (
     <StyledHeader>
       <Container>

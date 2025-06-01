@@ -4,14 +4,15 @@ import { FC } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { ColorTheme } from "@/app/style/ColorTheme";
 
 interface HeaderProps {
   title?: string;
 }
 
 const StyledHeader = styled.header`
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: ${ColorTheme.background.default};
+  box-shadow: 0 2px 4px ${ColorTheme.shadow.default};
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -41,8 +42,8 @@ const Container = styled.div`
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #000;
-    border: 1px solid rgb(71, 91, 74);
+    background-color: ${ColorTheme.background.default};
+    border: 1px solid ${ColorTheme.border.main};
   }
 
   .profile-name {
@@ -50,16 +51,16 @@ const Container = styled.div`
     line-height: 22px;
     text-align: left;
     font-size: 16px;
-    color: rgb(71, 91, 74);
+    color: ${ColorTheme.text.primary};
   }
 
   .profile-icon {
     display: flex;
     margin: 0px 4px;
     border-radius: 12px;
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid ${ColorTheme.border.light};
     padding: 4px 6px;
-    background: rgb(255, 255, 255);
+    background: ${ColorTheme.background.default};
   }
 `;
 
@@ -91,7 +92,11 @@ const Header: FC<HeaderProps> = ({ title = "Clone MY ROUTINE" }) => {
             <div className="profile-icon">🍒 🌼 🧶</div>
           </div>
           <IconContainer>
-            <FontAwesomeIcon icon={faBars} size="1x" color="rgb(71, 91, 74)" />
+            <FontAwesomeIcon
+              icon={faBars}
+              size="1x"
+              color={ColorTheme.text.primary}
+            />
           </IconContainer>
         </div>
       </Container>

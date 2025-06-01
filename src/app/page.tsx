@@ -7,9 +7,9 @@ import Footer from "@/components/Footer/Footer";
 export default function HomePage() {
   return (
     <>
-      <Header title="Clone MY ROUTINE" />
+      <Header />
       <Home />
-      <Footer companyName="Clone MY ROUTINE" />
+      <Footer />
     </>
   );
 }

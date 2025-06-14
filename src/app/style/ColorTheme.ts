@@ -11,8 +11,9 @@ export const ColorTheme = {
 
   // Background colors
   background: {
-    default: "#ffffff",
-    paper: "#f5f5f5",
+    default: "#ffffff", // White
+    paper: "#f5f5f5", // Light gray
+    homeGrey: "#fafafa", // Very light gray
   },
 
   // Text colors
@@ -20,6 +21,8 @@ export const ColorTheme = {
     primary: "#475B4A",
     secondary: "#CCCCCC",
     light: "#919C92",
+    homeDark: "#222222",
+    homeGray: "#454545",
   },
 
   // Border colors

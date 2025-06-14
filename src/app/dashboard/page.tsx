@@ -241,7 +241,7 @@ const DashboardPage: FC = () => {
 
   return (
     <>
-      <Header />
+      <Header isLogin={true} />
       <DashboardContainer>
         <ContentWrapper>
           <WelcomeSection>

@@ -7,6 +7,8 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ColorTheme } from "@/app/style/ColorTheme";
 import { Button } from "@mui/material";
 import Image from "next/image";
+import myRoutineHeaderIcon from "../../../public/myroutine_header_icon.png";
+import isLoginFalseLogo from "../../../public/isLoginFalseHome/isLoginFalse_logo.svg";
 
 const StyledHeader = styled.header`
   background-color: ${ColorTheme.background.default};
@@ -62,10 +64,6 @@ const Container = styled.div`
   }
 `;
 
-const LogoImage = styled.img`
-  width: 110px;
-`;
-
 const IconContainer = styled.div`
   display: flex;
   gap: 20px;
@@ -80,9 +78,9 @@ const Header = ({ isLogin }: { isLogin: boolean }) => {
     <StyledHeader>
       <Container>
         {isLogin ? (
-          <LogoImage src="/myroutine_header_icon.png" alt="My Routine" />
+          <Image src={myRoutineHeaderIcon} alt="My Routine" width={60} height={60} />
         ) : (
-          <Image src="/isLoginFalse_logo.svg" alt="My Routine" width={60} height={60} />
+          <Image src={isLoginFalseLogo} alt="My Routine" width={60} height={60} />
         )}
         {isLogin ? (
           <div className="profile-container">

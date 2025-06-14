@@ -1,13 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
-interface HomeProps {
-  title?: string;
-}
-
-const Home: React.FC<HomeProps> = ({ title = "Welcome" }) => {
+const Home = () => {
   // const [data, setData] = useState<any>(null);
   // const [error, setError] = useState<string | null>(null);
 
@@ -28,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ title = "Welcome" }) => {
 
   return (
     <div className="home-container">
-      <h1 style={{ height: "100vh" }}>{title}</h1>
+      <h1 style={{ height: "100vh" }}>Welcome</h1>
     </div>
   );
 };

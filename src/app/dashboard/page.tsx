@@ -248,7 +248,7 @@ const DashboardPage: FC = () => {
           <WelcomeSection>
             <WelcomeTitle>Welcome back, John!</WelcomeTitle>
             <WelcomeSubtitle>
-              Here's your routine overview for today
+              Here&apos;s your routine overview for today
             </WelcomeSubtitle>
           </WelcomeSection>
 
@@ -256,7 +256,7 @@ const DashboardPage: FC = () => {
             <MainContent>
               <Card>
                 <CardHeader>
-                  <CardTitle>Today's Routines</CardTitle>
+                  <CardTitle>Today&apos;s Routines</CardTitle>
                   <ViewAllButton>View All</ViewAllButton>
                 </CardHeader>
                 <RoutineList>

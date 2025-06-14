@@ -3,6 +3,7 @@
 import React from "react";
 
 const Home = () => {
+  console.log("home");
   // const [data, setData] = useState<any>(null);
   // const [error, setError] = useState<string | null>(null);
 

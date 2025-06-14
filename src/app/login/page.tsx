@@ -205,7 +205,7 @@ const LoginPage: FC = () => {
             </Button>
           </Form>
           <Divider>or</Divider>
-          <SignUpLink href="/signup">Don&apos;t have an account? Sign up</SignUpLink>
+          <SignUpLink href="/signup">Create an account</SignUpLink>
         </LoginCard>
       </LoginContainer>
       <Footer />

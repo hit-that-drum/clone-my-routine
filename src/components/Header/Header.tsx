@@ -83,7 +83,7 @@ const Header = () => {
               src="https://hips.hearstapps.com/hmg-prod/images/types-of-cherries-morello-1615572999.jpg?crop=0.437xw:1.00xh;0.0680xw,0&resize=980:*"
               className="profile-image"
             />
-            <div className="profile-name">밍밍</div>
+            <div className="profile-name">야아아아아아</div>
             <div className="profile-icon">🍒 🌼 🧶</div>
           </div>
           <IconContainer>

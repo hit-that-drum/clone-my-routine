@@ -3,6 +3,7 @@
 import Home from "./home/page";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import IsLoginFalseHome from "./isLoginFalseHome/page";
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
@@ -28,7 +29,7 @@ export default function HomePage() {
       ) : (
         <>
           <Header isLogin={isLogin} />
-          <div>love me like you do</div>
+          <IsLoginFalseHome />
           <Footer />
         </>
       )}

@@ -8,29 +8,29 @@ import { useEffect, useState } from "react";
 export default function HomePage() {
   const [isLogin, setIsLogin] = useState(false);
 
-  console.log("isLogin", isLogin);
+  console.log("yap", isLogin);
   useEffect(() => {
     // const token = localStorage.getItem("token");
     const token = null;
+    // const token = "1234567890";
     if (token) {
       setIsLogin(true);
     }
   }, []);
-  
-  if (!isLogin) {
-    return <div>NOT LOGIN</div>
-  }
 
   return (
     <>
       {isLogin ? (
         <>
-          <Header />
+          <Header isLogin={isLogin} />
           <Home />
-          <Footer />
         </>
       ) : (
-        <div>yap</div>
+        <>
+          <Header isLogin={isLogin} />
+          <div>love me like you do</div>
+          <Footer />
+        </>
       )}
     </>
   );

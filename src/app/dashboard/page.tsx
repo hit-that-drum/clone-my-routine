@@ -237,8 +237,7 @@ const DashboardPage: FC = () => {
     console.log("Complete routine:", id);
   };
 
-  const progressPercentage =
-    (dailyProgress.completed / dailyProgress.total) * 100;
+  const progressPercentage = (dailyProgress.completed / dailyProgress.total) * 100;
 
   return (
     <>
@@ -247,9 +246,7 @@ const DashboardPage: FC = () => {
         <ContentWrapper>
           <WelcomeSection>
             <WelcomeTitle>Welcome back, John!</WelcomeTitle>
-            <WelcomeSubtitle>
-              Here&apos;s your routine overview for today
-            </WelcomeSubtitle>
+            <WelcomeSubtitle>Here&apos;s your routine overview for today</WelcomeSubtitle>
           </WelcomeSection>
 
           <DashboardGrid>
@@ -290,9 +287,7 @@ const DashboardPage: FC = () => {
                     <StatLabel>Completed</StatLabel>
                   </StatItem>
                   <StatItem>
-                    <StatValue>
-                      {dailyProgress.total - dailyProgress.completed}
-                    </StatValue>
+                    <StatValue>{dailyProgress.total - dailyProgress.completed}</StatValue>
                     <StatLabel>Remaining</StatLabel>
                   </StatItem>
                 </StatsGrid>

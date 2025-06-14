@@ -1,9 +1,12 @@
 "use client";
 
+import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ColorTheme } from "@/app/style/ColorTheme";
+import { Button } from "@mui/material";
+import Image from "next/image";
 
 const StyledHeader = styled.header`
   background-color: ${ColorTheme.background.default};
@@ -72,28 +75,59 @@ const IconContainer = styled.div`
   }
 `;
 
-const Header = () => {
+const Header = ({ isLogin }: { isLogin: boolean }) => {
   return (
     <StyledHeader>
       <Container>
-        <LogoImage src="/myroutine_header_icon.png" alt="My Routine" />
-        <div className="profile-container">
-          <div className="profile-info">
-            <img
-              src="https://hips.hearstapps.com/hmg-prod/images/types-of-cherries-morello-1615572999.jpg?crop=0.437xw:1.00xh;0.0680xw,0&resize=980:*"
-              className="profile-image"
-            />
-            <div className="profile-name">야아아아아아</div>
-            <div className="profile-icon">🍒 🌼 🧶</div>
+        {isLogin ? (
+          <LogoImage src="/myroutine_header_icon.png" alt="My Routine" />
+        ) : (
+          <Image src="/isLoginFalse_logo.svg" alt="My Routine" width={60} height={60} />
+        )}
+        {isLogin ? (
+          <div className="profile-container">
+            <div className="profile-info">
+              <Image
+                src="https://hips.hearstapps.com/hmg-prod/images/types-of-cherries-morello-1615572999.jpg?crop=0.437xw:1.00xh;0.0680xw,0&resize=980:*"
+                className="profile-image"
+                alt="profile"
+              />
+              <div className="profile-name">야아아아아아</div>
+              <div className="profile-icon">🍒 🌼 🧶</div>
+            </div>
+            <IconContainer>
+              <FontAwesomeIcon icon={faBars} size="1x" color={ColorTheme.text.primary} />
+            </IconContainer>
           </div>
-          <IconContainer>
-            <FontAwesomeIcon
-              icon={faBars}
-              size="1x"
-              color={ColorTheme.text.primary}
-            />
-          </IconContainer>
-        </div>
+        ) : (
+          <>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: ColorTheme.black,
+                color: ColorTheme.white,
+                border: `1px solid ${ColorTheme.border.light}`,
+                borderRadius: "8px",
+                padding: "8px 12px",
+                height: "40px",
+                fontSize: "16px",
+                fontWeight: "bold",
+                boxShadow: "none",
+                "&:hover": {
+                  opacity: 0.7,
+                },
+              }}
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSdwizs-zindsiKlhTqL7eYvqrPsfafpnRNdetipMlUZIUxU7g/viewform",
+                  "_blank"
+                );
+              }}
+            >
+              제휴 문의
+            </Button>
+          </>
+        )}
       </Container>
     </StyledHeader>
   );

@@ -70,7 +70,9 @@ const RoutineCard = styled.div`
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
@@ -202,8 +204,7 @@ const RoutinesPage: FC = () => {
             <EmptyState>
               <EmptyStateTitle>No routines yet</EmptyStateTitle>
               <EmptyStateDescription>
-                Start building your daily routines to improve your productivity
-                and well-being.
+                Start building your daily routines to improve your productivity and well-being.
               </EmptyStateDescription>
               <CreateButton onClick={handleCreateRoutine}>
                 <span>+</span> Create Your First Routine

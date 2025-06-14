@@ -23,9 +23,6 @@ export async function POST() {
     return NextResponse.json(data);
   } catch (error) {
     console.error("Error fetching from Notion:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch data from Notion" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to fetch data from Notion" }, { status: 500 });
   }
 }

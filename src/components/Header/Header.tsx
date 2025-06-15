@@ -73,7 +73,7 @@ const IconContainer = styled.div`
   }
 `;
 
-const Header = ({ isLogin }: { isLogin: boolean }) => {
+const Header = ({ isLogin = false }: { isLogin?: boolean }) => {
   return (
     <StyledHeader>
       <Container>

@@ -2,6 +2,8 @@ export const ColorTheme = {
   // Base colors
   white: "#ffffff",
   black: "#000000",
+  blue: "#0070f3",
+  lightblue: "#6495ED",
 
   // Primary colors
   primary: {

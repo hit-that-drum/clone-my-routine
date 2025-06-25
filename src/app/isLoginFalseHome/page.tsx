@@ -2,6 +2,7 @@
 
 import { Box, Card, CardContent } from "@mui/material";
 import { ColorTheme } from "@/app/style/ColorTheme";
+import { descMainSxProps, descSubSxProps, secondSectionBoxSxprops, tabSxProps } from "./style";
 import Image from "next/image";
 import secondSection from "../../../public/isLoginFalseHome/second-section.png";
 import thirdSection from "../../../public/isLoginFalseHome/third-section.png";
@@ -14,44 +15,6 @@ import greenCheckIcon from "../../../public/isLoginFalseHome/green-check-icon.sv
 import { StaticImageData } from "next/image";
 import { Tabs, Tab } from "@mui/material";
 import { useState } from "react";
-
-const descMainSxProps = {
-  fontSize: "36px",
-  lineHeight: "53px",
-  color: ColorTheme.text.homeDark,
-  fontWeight: "bold",
-};
-const descSubSxProps = {
-  fontSize: "20px",
-  color: ColorTheme.text.homeGray,
-  margin: "50px 0",
-};
-const secondSectionBoxSxprops = {
-  display: "flex",
-  flexDirection: "row",
-  gap: 2,
-  alignItems: "center",
-  justifyContent: "space-around",
-  width: "1240px",
-  height: "620px",
-  padding: "60px 0",
-};
-const tabSxProps = {
-  margin: "0 10px",
-  padding: "16px 40px",
-  borderRadius: "40px",
-  border: "none",
-  background: ColorTheme.background.paper,
-  fontSize: "18px",
-  color: ColorTheme.text.homeDark,
-  cursor: "pointer",
-  transition: "0.3s",
-  boxShadow: `0px 2px 3px ${ColorTheme.text.secondary}`,
-  "&.Mui-selected": {
-    background: ColorTheme.green,
-    color: ColorTheme.white,
-  },
-};
 
 interface FeatureCardProps {
   emoji: string;
@@ -251,7 +214,7 @@ const LandingPageSection: React.FC = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              flex: "1 1 0%",
+              // flex: "1 1 0%",
               backgroundColor: ColorTheme.background.homeGrey,
               borderRadius: "12px",
               padding: "40px",
@@ -259,45 +222,125 @@ const LandingPageSection: React.FC = () => {
               height: "629px",
             }}
           >
-            <Box>무료 버전</Box>
-            <Box>
-              <Box>0원</Box>
-              <Box>무료로 사용할 수 있어요</Box>
+            <Box sx={{ width: "100%", height: "133px", marginBottom: "20px" }}>
+              <Box sx={{ margin: "0px 0px 12px", fontSize: "24px", fontWeight: 800 }}>
+                무료 버전
+              </Box>
+              <Box>
+                <Box sx={{ fontSize: "40px", fontWeight: 700 }}>0원</Box>
+                <Box sx={{ fontSize: "18px", color: ColorTheme.text.homeGray }}>
+                  무료로 사용할 수 있어요
+                </Box>
+              </Box>
             </Box>
             <Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>습관 추가 10개</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>일기 3건</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>짧은 메모 주 14개</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>긴 메모 주 7개</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>반복 주기 설정 매주만</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>형광펜 2개</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
                 <Image src={checkIcon} alt="check-icon" width={28} height={28} />
                 <Box>습관 통계 주간만</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                  color: ColorTheme.text.lightGray,
+                }}
+              >
                 <Image src={xIcon} alt="x-icon" width={28} height={28} />
                 <Box>투두 관리</Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                  color: ColorTheme.text.lightGray,
+                }}
+              >
                 <Image src={xIcon} alt="x-icon" width={28} height={28} />
                 <Box>광고 제거</Box>
               </Box>
@@ -305,9 +348,11 @@ const LandingPageSection: React.FC = () => {
           </Box>
           <Box
             sx={{
+              position: "relative",
+              overflow: "hidden",
               display: "flex",
               flexDirection: "column",
-              flex: "1 1 0%",
+              // flex: "1 1 0%",
               backgroundColor: ColorTheme.black,
               color: ColorTheme.white,
               borderRadius: "12px",
@@ -316,56 +361,768 @@ const LandingPageSection: React.FC = () => {
               height: "629px",
             }}
           >
-            <Box>무료 버전</Box>
-            <Box>
-              <Box>0원</Box>
-              <Box>무료로 사용할 수 있어요</Box>
+            <Box
+              sx={{
+                position: "absolute",
+                top: "20px",
+                right: "-12px",
+                backgroundColor: ColorTheme.green,
+                color: ColorTheme.white,
+                padding: "6px 12px",
+                fontSize: "16px",
+                fontWeight: "bold",
+                transform: "rotate(45deg) translate(21px, -15px)",
+                width: "150px",
+                textAlign: "center",
+              }}
+            >
+              POPULAR
+            </Box>
+            <Box sx={{ width: "100%", height: "133px", marginBottom: "20px" }}>
+              <Box
+                sx={{
+                  margin: "0px 0px 12px",
+                  fontSize: "24px",
+                  fontWeight: 800,
+                  color: ColorTheme.green,
+                }}
+              >
+                프리미엄
+              </Box>
+              <Box>
+                <Box
+                  sx={{
+                    fontSize: "20px",
+                    color: ColorTheme.text.lightGray,
+                    textDecoration: "line-through",
+                    marginTop: "-15px",
+                    marginBottom: "-15px",
+                  }}
+                >
+                  39,600원
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    alignContent: "flex-start",
+                  }}
+                >
+                  <Box sx={{ fontSize: "40px", fontWeight: 700 }}>33,000원</Box>
+                  <Box sx={{ fontSize: "18px", color: ColorTheme.text.lightGray }}>
+                    / 한 번 결제
+                  </Box>
+                </Box>
+                <Box sx={{ fontSize: "18px", color: ColorTheme.text.lightGray }}>
+                  마이루틴 기능을 무제한으로 사용해보세요
+                </Box>
+              </Box>
             </Box>
             <Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
                 <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>습관 추가 무제한</Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>습관 추가</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>일기</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>짧은 메모</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>긴 메모</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>일기 무제한</Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 1,
+                    fontSize: "19px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  <Box>반복 주기 설정</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
                 <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>짧은 메모 무제한</Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>형광펜</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
                 <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>긴 메모 무제한</Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>습관 통계</Box>
+                  <Box sx={{ fontWeight: 800 }}>주간/월간</Box>
+                </Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
                 <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>반복 주기 설정 무제한</Box>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>형광펜 무제한</Box>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>습관 통계 주간/월간</Box>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>투두 관리 무제한</Box>
-              </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
-                <Box>투두</Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>투두</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
               </Box>
             </Box>
           </Box>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Item Two
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              // flex: "1 1 0%",
+              backgroundColor: ColorTheme.background.homeGrey,
+              borderRadius: "12px",
+              padding: "40px",
+              width: "610px",
+              height: "629px",
+            }}
+          >
+            <Box sx={{ width: "100%", height: "133px", marginBottom: "20px" }}>
+              <Box sx={{ margin: "0px 0px 12px", fontSize: "24px", fontWeight: 800 }}>
+                무료 버전
+              </Box>
+              <Box>
+                <Box sx={{ fontSize: "40px", fontWeight: 700 }}>0원</Box>
+                <Box sx={{ fontSize: "18px", color: ColorTheme.text.homeGray }}>
+                  무료로 사용할 수 있어요
+                </Box>
+              </Box>
+            </Box>
+            <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>습관 추가 10개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>일기 3건</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>짧은 메모 주 14개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>긴 메모 주 7개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>반복 주기 설정 매주만</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>형광펜 2개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>습관 통계 주간만</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                  color: ColorTheme.text.lightGray,
+                }}
+              >
+                <Image src={xIcon} alt="x-icon" width={28} height={28} />
+                <Box>투두 관리</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                  color: ColorTheme.text.lightGray,
+                }}
+              >
+                <Image src={xIcon} alt="x-icon" width={28} height={28} />
+                <Box>광고 제거</Box>
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              // flex: "1 1 0%",
+              backgroundColor: ColorTheme.black,
+              color: ColorTheme.white,
+              borderRadius: "12px",
+              padding: "40px 30px",
+              width: "610px",
+              height: "629px",
+            }}
+          >
+            <Box sx={{ width: "100%", height: "133px", marginBottom: "20px" }}>
+              <Box
+                sx={{
+                  margin: "0px 0px 12px",
+                  fontSize: "24px",
+                  fontWeight: 800,
+                  color: ColorTheme.green,
+                }}
+              >
+                프리미엄
+              </Box>
+              <Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    alignContent: "flex-start",
+                  }}
+                >
+                  <Box sx={{ fontSize: "40px", fontWeight: 700 }}>3,900원</Box>
+                  <Box sx={{ fontSize: "18px", color: ColorTheme.text.lightGray }}>
+                    / 한 번 결제
+                  </Box>
+                </Box>
+                <Box sx={{ fontSize: "18px", color: ColorTheme.text.lightGray }}>
+                  마이루틴 기능을 무제한으로 사용해보세요
+                </Box>
+              </Box>
+            </Box>
+            <Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>습관 추가</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>일기</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>짧은 메모</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>긴 메모</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 1,
+                    fontSize: "19px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  <Box>반복 주기 설정</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>형광펜</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>습관 통계</Box>
+                  <Box sx={{ fontWeight: 800 }}>주간/월간</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>투두</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          Item Three
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              // flex: "1 1 0%",
+              backgroundColor: ColorTheme.background.homeGrey,
+              borderRadius: "12px",
+              padding: "40px",
+              width: "610px",
+              height: "629px",
+            }}
+          >
+            <Box sx={{ width: "100%", height: "133px", marginBottom: "20px" }}>
+              <Box sx={{ margin: "0px 0px 12px", fontSize: "24px", fontWeight: 800 }}>
+                무료 버전
+              </Box>
+              <Box>
+                <Box sx={{ fontSize: "40px", fontWeight: 700 }}>0원</Box>
+                <Box sx={{ fontSize: "18px", color: ColorTheme.text.homeGray }}>
+                  무료로 사용할 수 있어요
+                </Box>
+              </Box>
+            </Box>
+            <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>습관 추가 10개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>일기 3건</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>짧은 메모 주 14개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>긴 메모 주 7개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>반복 주기 설정 매주만</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>형광펜 2개</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                }}
+              >
+                <Image src={checkIcon} alt="check-icon" width={28} height={28} />
+                <Box>습관 통계 주간만</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                  color: ColorTheme.text.lightGray,
+                }}
+              >
+                <Image src={xIcon} alt="x-icon" width={28} height={28} />
+                <Box>투두 관리</Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                  fontSize: "19px",
+                  marginBottom: "12px",
+                  color: ColorTheme.text.lightGray,
+                }}
+              >
+                <Image src={xIcon} alt="x-icon" width={28} height={28} />
+                <Box>광고 제거</Box>
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              // flex: "1 1 0%",
+              backgroundColor: ColorTheme.black,
+              color: ColorTheme.white,
+              borderRadius: "12px",
+              padding: "40px 30px",
+              width: "610px",
+              height: "629px",
+            }}
+          >
+            <Box sx={{ width: "100%", height: "133px", marginBottom: "20px" }}>
+              <Box
+                sx={{
+                  margin: "0px 0px 12px",
+                  fontSize: "24px",
+                  fontWeight: 800,
+                  color: ColorTheme.green,
+                }}
+              >
+                프리미엄
+              </Box>
+              <Box>
+                <Box
+                  sx={{
+                    fontSize: "20px",
+                    color: ColorTheme.text.lightGray,
+                    textDecoration: "line-through",
+                    marginTop: "-15px",
+                    marginBottom: "-15px",
+                  }}
+                >
+                  468,600원
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    alignContent: "flex-start",
+                  }}
+                >
+                  <Box sx={{ fontSize: "40px", fontWeight: 700 }}>89,000원</Box>
+                  <Box sx={{ fontSize: "18px", color: ColorTheme.text.lightGray }}>
+                    / 한 번 결제
+                  </Box>
+                </Box>
+                <Box sx={{ fontSize: "18px", color: ColorTheme.text.lightGray }}>
+                  마이루틴 기능을 무제한으로 사용해보세요
+                </Box>
+              </Box>
+            </Box>
+            <Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>습관 추가</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>일기</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>짧은 메모</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>긴 메모</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 1,
+                    fontSize: "19px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  <Box>반복 주기 설정</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>형광펜</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>습관 통계</Box>
+                  <Box sx={{ fontWeight: 800 }}>주간/월간</Box>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginBottom: "12px" }}>
+                <Image src={greenCheckIcon} alt="check-icon" width={28} height={28} />
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    fontSize: "19px",
+                  }}
+                >
+                  <Box>투두</Box>
+                  <Box sx={{ fontWeight: 800 }}>무제한</Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
         </CustomTabPanel>
       </CardContent>
       <CardContent

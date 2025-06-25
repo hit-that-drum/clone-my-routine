@@ -23,6 +23,7 @@ export const ColorTheme = {
   text: {
     primary: "#475B4A",
     secondary: "#CCCCCC",
+    lightGray: "#AAAAAA",
     light: "#919C92",
     homeDark: "#222222",
     homeGray: "#454545",

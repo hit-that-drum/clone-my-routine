@@ -36,6 +36,22 @@ const secondSectionBoxSxprops = {
   height: "620px",
   padding: "60px 0",
 };
+const tabSxProps = {
+  margin: "0 10px",
+  padding: "16px 40px",
+  borderRadius: "40px",
+  border: "none",
+  background: ColorTheme.background.paper,
+  fontSize: "18px",
+  color: ColorTheme.text.homeDark,
+  cursor: "pointer",
+  transition: "0.3s",
+  boxShadow: `0px 2px 3px ${ColorTheme.text.secondary}`,
+  "&.Mui-selected": {
+    background: ColorTheme.green,
+    color: ColorTheme.white,
+  },
+};
 
 interface FeatureCardProps {
   emoji: string;
@@ -221,10 +237,14 @@ const LandingPageSection: React.FC = () => {
           margin: "0 auto",
         }}
       >
-        <Tabs value={value} onChange={handleChange}>
-          <Tab label="연 구독" {...a11yProps(0)} />
-          <Tab label="월 구독" {...a11yProps(1)} />
-          <Tab label="평생 구독" {...a11yProps(2)} />
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          sx={{ "& .MuiTabs-indicator": { display: "none" } }}
+        >
+          <Tab label="연 구독" {...a11yProps(0)} sx={tabSxProps} />
+          <Tab label="월 구독" {...a11yProps(1)} sx={tabSxProps} />
+          <Tab label="평생 구독" {...a11yProps(2)} sx={tabSxProps} />
         </Tabs>
         <CustomTabPanel value={value} index={0}>
           <Box
@@ -234,7 +254,7 @@ const LandingPageSection: React.FC = () => {
               flex: "1 1 0%",
               backgroundColor: ColorTheme.background.homeGrey,
               borderRadius: "12px",
-              padding: "40px 30px",
+              padding: "40px",
               width: "610px",
               height: "629px",
             }}

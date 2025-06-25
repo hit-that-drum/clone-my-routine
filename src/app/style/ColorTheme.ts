@@ -4,6 +4,7 @@ export const ColorTheme = {
   black: "#000000",
   blue: "#0070f3",
   lightblue: "#6495ED",
+  green: "#18CD72",
 
   // Primary colors
   primary: {

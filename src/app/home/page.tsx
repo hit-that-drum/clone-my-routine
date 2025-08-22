@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1 style={{ height: "100vh" }}>Welcome</h1>
+      <h1 style={{ height: "100vh" }}>merge-test</h1>
     </div>
   );
 };

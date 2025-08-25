@@ -23,8 +23,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1 style={{ height: "100vh" }}>feature/PROD-develop</h1>
-      <p>交わした約束も一人じゃできないって事。</p>
+      <h1 style={{ height: "100vh" }}>feature/PROD-merge</h1>
     </div>
   );
 };
